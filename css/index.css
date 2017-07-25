@@ -4,3 +4,11 @@ body {
     font-size: 24px;
     color: white;
 }
+
+.head {
+    text-align: center;
+}
+
+#howto {
+    font-size: 16px;
+}
