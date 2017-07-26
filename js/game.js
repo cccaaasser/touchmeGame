@@ -1,9 +1,9 @@
-function Main() {
-    var canvas = document.getElementById('circle');
+function startGame() {
+    var canvas = document.getElementById('myCanvas');
     var context = canvas.getContext('2d');
     var centerX = canvas.width / 2;
     var centerY = canvas.height / 2;
-    var radius = 70;
+    var radius = 32;
 
     context.beginPath();
     context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
