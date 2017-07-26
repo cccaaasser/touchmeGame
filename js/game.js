@@ -1,5 +1,5 @@
 function Main() {
-    var canvas = document.getElementById('myCanvas');
+    var canvas = document.getElementById('circle');
     var context = canvas.getContext('2d');
     var centerX = canvas.width / 2;
     var centerY = canvas.height / 2;
