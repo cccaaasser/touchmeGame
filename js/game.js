@@ -1,5 +1,5 @@
-function playNow () {
-
+window.onload = function ()
+    {
     canvas = document.getElementById("myCanvas");
     context = canvas.getContext("2d");
 
