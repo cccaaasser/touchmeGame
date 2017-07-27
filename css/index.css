@@ -12,8 +12,8 @@ body {
 
 #playButton {
     text-align: center;
-    width: 250px;
-    height: 80px;
+    width: 240px;
+    height: 70px;
     font-size: 50px;
     background-color: orange;
     color: white;
@@ -24,3 +24,6 @@ body {
     border: 5px solid white;
 }
 
+.Score {
+    font-size: 18px;
+}

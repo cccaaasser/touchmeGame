@@ -1,4 +1,4 @@
-window.onload = function () {
+function playNow () {
 
     canvas = document.getElementById("myCanvas");
     context = canvas.getContext("2d");
@@ -8,7 +8,6 @@ window.onload = function () {
 
 //variable to keep track of score and fails
     var score = 0;
-    var fails = 0;
 
     //onmousedown function
     //user click even will happen
@@ -20,17 +19,15 @@ window.onload = function () {
 
         //Check only hit the last element(rect) in the array
         var i = placeHolder.length - 1;
-
+        var points = document.getElementById("score").innerHTML = score;
         //If collision function is true
         if (collision(placeHolder[i].x, placeHolder[i].y,40,40,x,y)) {
             //Increase the score by one
             score = score + 1;
-            var points = document.getElementById("score").innerHTML = score;
         }
         else {
             //Otherwise increase the fails by one
-            fails = fails + 1;
-            var misses = document.getElementById("fails").innerHTML = fails;
+            score = score - 1;
         }
     };
 
