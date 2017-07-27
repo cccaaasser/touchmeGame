@@ -1,16 +1,13 @@
 body {
     background-color: brown;
     font-family: "Lucida Console", "Times New Roman";
-    font-size: 24px;
+    font-size: 14px;
     color: white;
 }
 
 .head {
     text-align: center;
-}
-
-#howto {
-    font-size: 14px;
+    font-size: 26px;
 }
 
 #playButton {
@@ -21,3 +18,9 @@ body {
     background-color: orange;
     color: white;
 }
+
+#myCanvas {
+    background-size: 100%;
+    border: 5px solid white;
+}
+
