@@ -1,3 +1,20 @@
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+};
+
 window.onload = function ()
     {
     canvas = document.getElementById("myCanvas");
@@ -8,6 +25,11 @@ window.onload = function ()
 
 //variable to keep track of score and fails
     var score = 0;
+
+    //time counter
+    var oneMinute = 60,
+        display = document.querySelector('#time');
+    startTimer(oneMinute, display);
 
     //onmousedown function
     //user click even will happen
@@ -20,6 +42,10 @@ window.onload = function ()
         //Check only hit the last element(rect) in the array
         var i = placeHolder.length - 1;
         var points = document.getElementById("score").innerHTML = score;
+
+        if (oneMinute == 0) {
+            alert("timeout!");
+        }
         //If collision function is true
         if (collision(placeHolder[i].x, placeHolder[i].y,40,40,x,y)) {
             //Increase the score by one
